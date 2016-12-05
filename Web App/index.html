@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Life Services Campaign Directions</title>
+
+        <!-- Bulma.css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.2.3/css/bulma.css">
+
+        <!-- Font Awesome Icons -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+        <!-- Style.css -->
+        <link rel="stylesheet" type="text/css" href="./css/style.css" media="screen" />
+
+        <!-- AddInput.js -->
+        <script src="./js/addInput.js" language="Javascript" type="text/javascript"></script>
+
+        <!-- Map.js -->
+        <script src="./js/map.js" language="Javascript" type="text/javascript"></script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <!-- Header -->
+        <section class="hero is-primary">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title">
+                        Life Services
+                    </h1>
+                    <h2 class="subtitle">
+                        Campaign Directions
+                    </h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <section class="section">
+            <!-- Form -->
+            <div class="box">
+                <div id="dynamicInput">
+                    <label class="label">Address 1</label>
+                    <p class="control">
+                        <input class="input" type="text" placeholder="ex. 1234 N Division Rd. Spokane, WA" id="input 1">
+                    </p>
+                </div>
+                <div class = "main-buttons">
+                    <a class="button is-primary is-outlined" onClick="addInput('dynamicInput');">
+                        <span class="icon">
+                            <i class="fa fa-plus"></i>
+                        </span>
+                        <span>Add</span>
+                    </a>
+                    <a class="button is-danger is-outlined" onClick="deleteLastInput('dynamicInput');">
+                        <span class="icon">
+                            <i class="fa fa-minus"></i>
+                        </span>
+                        <span>Delete</span>
+                    </a>
+                    <a class="button is-success is-outlined" onClick="displayRoute();">
+                        <span class="icon">
+                            <i class="fa fa-check"></i>
+                        </span>
+                        <span>Run Algorithm</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Google Maps View -->
+            <div class="box">
+                <div id="map"></div>
+                <script>
+                    initMap();
+                </script>
+                <script async defer
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvurKDPf13lEymxJVrTnmbNCo4V28wlok&callback=initMap">
+                </script>
+            </div>
+
+            <!-- Google Maps Instructions -->
+            <div class = "box">
+                <div id="mapPanel"></div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="content has-text-centered">
+                    <p>
+                        <strong>Life Services Directions</strong> by <a href="">Ian, Michael and Patrick</a>. The source code is licensed
+                        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+                        is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC ANS 4.0</a>.
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

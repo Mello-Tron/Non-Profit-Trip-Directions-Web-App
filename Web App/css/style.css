@@ -1,0 +1,9 @@
+/* Style for Google Map */
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+.main-buttons {
+    margin-top: 13px;
+}
