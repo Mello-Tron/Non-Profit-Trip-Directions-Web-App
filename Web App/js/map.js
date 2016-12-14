@@ -27,7 +27,7 @@ function displayRoute() {
 
     //Get waypoints from address boxes
     var items = [];
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < 20; i++) {
         var currentName = "input ";
         currentName += i;
         var currentInput = document.getElementById(currentName);
